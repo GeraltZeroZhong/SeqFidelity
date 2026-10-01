@@ -1,0 +1,10 @@
+SeqFidelity
+
+The LegNet baseline includes code adapted from human_legnet,
+Copyright 2024 Dmitry Penzar. Its MIT license is retained verbatim in
+licenses/human_legnet-MIT.txt. Algorithm and upstream attribution are described
+with the corresponding implementation.
+
+Project-owned code is available under the MIT License in LICENSE,
+Copyright (c) 2026 Shuyu Zhong. The third-party notice above applies to the
+attributed component.
