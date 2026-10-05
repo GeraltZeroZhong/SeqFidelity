@@ -6,6 +6,7 @@ include .gitattributes
 include pyproject.toml
 include MANIFEST.in
 include CONTRIBUTING.md
+include CHANGELOG.md
 recursive-include seqfidelity *.py
 recursive-include tests *.py
 recursive-include examples *.py
