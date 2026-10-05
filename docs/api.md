@@ -96,6 +96,12 @@ fixed across splits, models, and reused readouts. The same parameter is accepted
 by `diagnostics.extract_pair_features` and `probes.cache_representations`; the
 cache manifest records it.
 
+Treat each representation cache as a fixed snapshot of its input data and model.
+Reuse checks compare checkpoint path and modification time, extraction settings,
+split sizes, and ordered pair identifiers. Sequence and label contents are outside
+these checks. Choose a fresh cache directory whenever sequences, labels, or model
+weights change, including changes that retain the same pair identifiers.
+
 The LegNet architecture requires sequences of at least 16 nucleotides. Its
 training batches require equal sequence lengths. Prediction groups sequences by
 length before passing them to this architecture.

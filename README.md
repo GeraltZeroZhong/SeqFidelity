@@ -12,9 +12,18 @@ reference score. Sequence length masks separate valid nucleotides from padding.
 
 ## Installation
 
-Use Python 3.10 or newer and a compatible PyTorch installation:
+Use Python 3.10 or newer and a compatible PyTorch installation. Install the
+tagged release from GitHub:
 
 ```bash
+python -m pip install 'seqfidelity[io] @ git+https://github.com/GeraltZeroZhong/SeqFidelity.git@v0.1.0'
+```
+
+For development, clone the repository and install from its root:
+
+```bash
+git clone https://github.com/GeraltZeroZhong/SeqFidelity.git
+cd SeqFidelity
 python -m pip install -e '.[test,io]'
 ```
 
@@ -98,7 +107,20 @@ seqfidelity evaluate --input output/predictions.tsv --validation-predictions out
 Use validation and evaluation tables with distinct evaluation roles in an actual
 application. The command above demonstrates file interfaces on synthetic data.
 Component bootstrap intervals describe uncertainty over the supplied components
-conditional on fitted models. They do not estimate training-seed variation.
+conditional on fitted models. Assess training-seed variation through repeated
+training runs.
+
+## Documentation and releases
+
+- [API guide](docs/api.md): models, training, evaluation, and representation tools.
+- [Input schemas](docs/input_schema.md): sequence, label, and prediction fields.
+- [Test guide](docs/testing.md): synthetic fixture provenance and checks.
+- [Changelog](CHANGELOG.md): versioned software changes.
+- [Releases](https://github.com/GeraltZeroZhong/SeqFidelity/releases): tagged source
+  and installable distributions.
+
+The distribution contains reusable software and independently generated examples.
+Model fitting and evaluation use inputs and output locations supplied by the user.
 
 ## Tests and examples
 
